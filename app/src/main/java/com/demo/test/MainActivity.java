@@ -34,7 +34,6 @@ public class MainActivity extends Activity
         final String username = userNameEt.getText().toString().trim();
         final String password = passwordEt.getText().toString().trim();
 
-
         RetrofitUtil.provideRetrofit(OkHttpUtil.instance().getClient(), AppConfig.Url.BASE_URL)
                 .create(DataService.class).login(username, password)
                 .subscribeOn(Schedulers.io())
